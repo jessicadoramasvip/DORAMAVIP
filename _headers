@@ -1,0 +1,2 @@
+/*
+x-frame-options: ALLOW-FROM https://content-security-policy: frame-ances access-control-allow-origin: *
