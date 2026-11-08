@@ -14,7 +14,113 @@ const dramas = [
  {id:12,title:'Rejeitada, mas Reivindicada pelo Alfa Implacável',image:'dorama-12.jpg',description:'Rejeição e destino se cruzam em um romance de alfas.'},
  {id:4,title:'Domador Supremo: A Evolução ao Contrário',image:'dorama-4.jpg',description:'Uma jornada de evolução, desafios e poderes a descobrir.'},
  {id:13,title:'Sistema de Praga Sombria',image:'dorama-13.jpeg',description:'Um sistema misterioso abre as portas para uma aventura sombria.'}
-].map(item => ({...item, category:null,video:null}));
+]  // ... coloque uma vírgula após o dorama 13 e cole estes logo abaixo:
+
+  {
+    id: "ascensao-nova-rainha",
+    title: "A Ascensão da Nova Rainha",
+    image: "/DORAMAVIP/assets/dorama-14.png",
+    linkTelegram: "https://t.me/jessicadoramasvip"
+  },
+  {
+    id: "encontrei-meu-papai-na-obra",
+    title: "Encontrei Meu Papai na Obra (Dublado)",
+    image: "/DORAMAVIP/assets/dorama-15.png",
+    linkTelegram: "https://t.me/jessicadoramasvip"
+  },
+  {
+    id: "entrega-especial-minha-filha",
+    title: "Entrega Especial: Minha Filha de 17 Anos (Dublado)",
+    image: "/DORAMAVIP/assets/dorama-16.png",
+    linkTelegram: "https://t.me/jessicadoramasvip"
+  },
+  {
+    id: "destino-roubado-irma-bestial",
+    title: "Destino Roubado: Minha Irmã e o Meu Bestial",
+    image: "/DORAMAVIP/assets/dorama-17.png",
+    linkTelegram: "https://t.me/jessicadoramasvip"
+  },
+  {
+    id: "de-serpente-ao-infinito",
+    title: "De Serpente ao Infinito (Dublado)",
+    image: "/DORAMAVIP/assets/dorama-18.png",
+    linkTelegram: "https://t.me/jessicadoramasvip"
+  },
+  {
+    id: "reclamado-pelo-rei-profundezas",
+    title: "Reclamado pelo Rei das Profundezas",
+    image: "/DORAMAVIP/assets/dorama-20.png",
+    linkTelegram: "https://t.me/jessicadoramasvip"
+  },
+  {
+    id: "ajoelhe-diante-da-minha-volta",
+    title: "Ajoelhe Diante da Minha Volta (Dublado)",
+    image: "/DORAMAVIP/assets/dorama-21.png",
+    linkTelegram: "https://t.me/jessicadoramasvip"
+  },
+  {
+    id: "minha-irma-mais-velha-mafia",
+    title: "Minha Irmã Mais Velha e Seu Império da Máfia",
+    image: "/DORAMAVIP/assets/dorama-22.png",
+    linkTelegram: "https://t.me/jessicadoramasvip"
+  },
+  {
+    id: "carpinteiro-sem-lobo-domina-mundo",
+    title: "O Carpinteiro Sem Lobo Domina o Mundo",
+    image: "/DORAMAVIP/assets/dorama-23.png",
+    linkTelegram: "https://t.me/jessicadoramasvip"
+  },
+  {
+    id: "pedreiro-e-a-bilionaria",
+    title: "O Pedreiro e a Bilionária (Dublado)",
+    image: "/DORAMAVIP/assets/dorama-24.png",
+    linkTelegram: "https://t.me/jessicadoramasvip"
+  },
+  {
+    id: "retorno-atacante-perdido",
+    title: "O Retorno do Atacante Perdido",
+    image: "/DORAMAVIP/assets/dorama-25.png",
+    linkTelegram: "https://t.me/jessicadoramasvip"
+  },
+  {
+    id: "pense-melhor-mae-chefona",
+    title: "Pense Melhor! Eu Sou a Mãe Chefona",
+    image: "/DORAMAVIP/assets/dorama-26.png",
+    linkTelegram: "https://t.me/jessicadoramasvip"
+  },
+  {
+    id: "querido-irmao-amou-tarde-demais",
+    title: "Querido Irmão, Você Me Amou Tarde Demais (Dublado)",
+    image: "/DORAMAVIP/assets/dorama-27.png",
+    linkTelegram: "https://t.me/jessicadoramasvip"
+  },
+  {
+    id: "rejeitada-pelos-cinco-amada-principe",
+    title: "Rejeitada pelos Cinco, Amada pelo Príncipe",
+    image: "/DORAMAVIP/assets/dorama-28.png",
+    linkTelegram: "https://t.me/jessicadoramasvip"
+  },
+  {
+    id: "sete-anos-apaixonado-ao-abusado",
+    title: "Sete Anos do Apaixonado ao Abusado",
+    image: "/DORAMAVIP/assets/dorama-29.png",
+    linkTelegram: "https://t.me/jessicadoramasvip"
+  },
+  {
+    id: "seu-marido-inutil-e-um-chefao",
+    title: "Seu Marido Inútil é um Chefão",
+    image: "/DORAMAVIP/assets/dorama-30.png",
+    linkTelegram: "https://t.me/jessicadoramasvip"
+  },
+  {
+    id: "tempestade-o-ultimo-mecha",
+    title: "Tempestade: O Último Mecha (Dublado)",
+    image: "/DORAMAVIP/assets/dorama-31.png",
+    linkTelegram: "https://t.me/jessicadoramasvip"
+  }
+// Certifique-se de que a lista termina com o colchete ] fechar logo abaixo
+
+.map(item => ({...item, category:null,video:null}));
 const categories=['Todos','Anime','Asiático','Coreano','Brasileiro','Japonês'];
 let selected='Todos';
 // Seleção temporária desta página; não registra pedidos nem confirma pagamentos.
@@ -81,7 +187,7 @@ function renderCart(){
  const needed=3-items.length%3;
  hint.textContent=items.length%3?`Adicione mais ${needed} dorama${needed===1?'':'s'} para completar outro trio por R$ 11,00.`:'Oferta de três doramas aplicada! Todos os títulos têm acesso vitalício.';
  const message=['Olá, Jessica! Quero comprar estes doramas:',...items.map((item,index)=>`${index+1}. ${item.title}`),'',`Valor avulso: ${money(pricing.subtotal)}`,`Desconto: ${money(pricing.discount)}`,`Total: ${money(pricing.total)}`,pricing.groups?`Oferta: ${pricing.groups} trio(s) por R$ 11,00 cada.`:'','Pagamento via Pix, com acesso vitalício. Como posso pagar?'].filter(Boolean).join('\n');
- const checkout=document.createElement('a');checkout.className='btn cart-checkout';checkout.href='https://t.me/JessicaDoramasvip?text='+encodeURIComponent(message);checkout.target='_blank';checkout.rel='noopener noreferrer';checkout.textContent='Enviar pedido pelo Telegram ↗';
+ const checkout=document.createElement('a');checkout.className='btn cart-checkout';checkout.href='@doramasvip_dot_com_bot'+encodeURIComponent(message);checkout.target='_blank';checkout.rel='noopener noreferrer';checkout.textContent='Enviar pedido pelo Telegram ↗';
  const whatsappCheckout=checkout.cloneNode(true);whatsappCheckout.className='btn cart-checkout whatsapp-checkout';whatsappCheckout.href='https://wa.me/5534984145389?text='+encodeURIComponent(message);whatsappCheckout.textContent='Enviar pedido pelo WhatsApp ↗';
  const alternative=document.createElement('p');alternative.className='cart-hint';alternative.textContent='Não tem Telegram? Envie o mesmo pedido pelo WhatsApp: (34) 98414-5389.';
  const note=document.createElement('p');note.className='cart-hint';note.textContent='O pagamento via Pix é combinado com a Jessica no Telegram ou WhatsApp. Sua seleção vale enquanto esta página estiver aberta.';
